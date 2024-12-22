@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "361610093537",
+    "project_id": "uts-proyek-concertix",
+    "storage_bucket": "uts-proyek-concertix.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361610093537:android:fd79db685f1ccfc9b6e8a0",
+        "android_client_info": {
+          "package_name": "com.example.concertix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByqpWjNwXQSXtZSBK4pagF3uxk82LhDzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

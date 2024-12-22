@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.transactiondetail.TransactionDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="100dp"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_ticket"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_check_circle_24"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Successful"
+            android:textSize="16sp"
+            android:textColor="@color/green"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/tv_transaction_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:text="Transaction Number: 12341353112"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/dashed_stroke"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/img_barcode"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="start"
+                android:text="Amount Paid:"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Rp567.000"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="start"
+                android:text="Wallet:"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_wallet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="BCA"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:padding="20dp"
+        android:background="@color/mirage_blue"
+        app:layout_constraintTop_toBottomOf="@id/layout_top">
+
+        <TextView
+            android:id="@+id/tv_event_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Pestapora 2024"/>
+
+        <ImageView
+            android:id="@+id/iv_date"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_date"
+            app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            tools:text="Friday, 24 Aug 2024"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+            app:layout_constraintStart_toEndOf="@id/iv_date"/>
+
+        <ImageView
+            android:id="@+id/iv_time"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+            app:layout_constraintStart_toEndOf="@id/tv_date"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            tools:text="6.30 - 9.30"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+            app:layout_constraintStart_toEndOf="@id/iv_time"/>
+
+        <ImageView
+            android:id="@+id/iv_location"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_location_2"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            tools:text="Gambir Expo dan JIExpo Hall D2."
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_date"
+            app:layout_constraintStart_toEndOf="@id/iv_location"/>
+
+        <TextView
+            android:id="@+id/tv_location_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            tools:text="Kemayoran, Jakarta"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tv_location"
+            app:layout_constraintStart_toEndOf="@id/iv_location"/>
+
+        <ImageView
+            android:id="@+id/iv_event_type"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_music"
+            app:layout_constraintTop_toBottomOf="@id/tv_location_2"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_event_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            tools:text="Festival"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_location_2"
+            app:layout_constraintStart_toEndOf="@id/iv_event_type"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="20dp"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/layout_bottom"
+        app:backgroundTint="@color/orange"
+        app:cornerRadius="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

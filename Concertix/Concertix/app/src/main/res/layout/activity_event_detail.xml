@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.eventdetail.EventDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@android:color/transparent"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="20dp"
+                tools:src="@drawable/pestapora_banner"
+                android:adjustViewBounds="true"
+                android:background="@drawable/top_corner_radius_shape"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/gradient_shadow"
+                android:layout_gravity="bottom"/>
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/mirage_blue">
+
+            <TextView
+                android:id="@+id/tv_event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Pestapora 2024"/>
+
+            <ImageView
+                android:id="@+id/iv_date"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_date"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                tools:text="Friday, 24 Aug 2024"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+                app:layout_constraintStart_toEndOf="@id/iv_date"/>
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/ic_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+                app:layout_constraintStart_toEndOf="@id/tv_date"/>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                tools:text="6.30 - 9.30"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_name"
+                app:layout_constraintStart_toEndOf="@id/iv_time"/>
+
+            <ImageView
+                android:id="@+id/iv_location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_location"
+                app:layout_constraintTop_toBottomOf="@id/tv_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_location_2"/>
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                tools:text="Gambir Expo dan JIExpo Hall D2."
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_date"
+                app:layout_constraintStart_toEndOf="@id/iv_location"/>
+
+            <TextView
+                android:id="@+id/tv_location_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                tools:text="Kemayoran, Jakarta"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tv_location"
+                app:layout_constraintStart_toEndOf="@id/iv_location"/>
+
+            <ImageView
+                android:id="@+id/iv_event_type"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_music"
+                app:layout_constraintTop_toBottomOf="@id/tv_location_2"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_event_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                tools:text="Festival"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_location_2"
+                app:layout_constraintStart_toEndOf="@id/iv_event_type"/>
+
+            <ImageView
+                android:id="@+id/iv_price"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_ticket"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_type"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                tools:text="Rp. 500.000 - Rp. 700.000"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_event_type"
+                app:layout_constraintStart_toEndOf="@id/iv_price"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/top_corner_radius_shape"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Details Location"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:src="@drawable/map"
+                android:adjustViewBounds="true"/>
+
+            <TextView
+                android:id="@+id/tv_location_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                tools:text="Gambir Expo dan JIExpo Hall D2."
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_location_detail_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="20dp"
+                tools:text="Kemayoran, Jakarta"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tv_location"
+                app:layout_constraintStart_toEndOf="@id/iv_location"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/top_corner_radius_shape"
+                android:backgroundTint="@color/astronaut_blue"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price_low"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rp 500.000 Onwards"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:text="Buy Tickets"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:backgroundTint="@color/orange"
+                app:cornerRadius="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

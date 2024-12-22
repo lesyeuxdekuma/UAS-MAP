@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home"
+        android:title="Beranda"/>
+
+    <item android:id="@+id/menu_ticket"
+        android:icon="@drawable/ic_ticket"
+        android:title="Tiket"/>
+
+    <item android:id="@+id/menu_order"
+        android:icon="@drawable/ic_calendar"
+        android:title="Pesanan"/>
+
+    <item android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_account"
+        android:title="Profile"/>
+
+</menu>

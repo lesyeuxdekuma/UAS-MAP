@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Concertix" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/astronaut_blue</item>
+        <item name="colorPrimaryVariant">@color/astronaut_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+        <item name="android:fontFamily">@font/plus_jakarta_font</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Theme.Concertix.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/astronaut_blue</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.Concertix</item>
+    </style>
+
+    <style name="Theme.Concertix.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Concertix.RoundedBottomSheet</item>
+    </style>
+
+    <style name="Widget.Concertix.RoundedBottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <!-- Transparent background to allow custom rounded shape -->
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomTabText" parent="TextAppearance.Material3.LabelMedium">
+        <!-- Disable all caps -->
+        <item name="textAllCaps">false</item>
+        <!-- Customize text size -->
+        <item name="android:textSize">16sp</item>
+        <!-- Customize text color -->
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>

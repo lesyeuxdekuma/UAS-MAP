@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="astronaut_blue">#053C5E</color>
+    <color name="mirage_blue">#10181F</color>
+    <color name="azure_blue">#0087FF</color>
+    <color name="orange">#E16539</color>
+    <color name="orange_transparent">#ABE16539</color>
+    <color name="green">#5DC7AD</color>
+</resources>
